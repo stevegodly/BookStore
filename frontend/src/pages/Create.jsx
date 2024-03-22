@@ -22,7 +22,7 @@ const Create = () => {
       author:author,
       publishYear:year,
     }
-    axios.post('http://localhost:5000/api/v1/books',data)
+    axios.post('https://bookstore-yhcb.onrender.com/api/v1/books',data)
     .then(()=>{
       setLoading(false)
       enqueueSnackbar('Book Created successfully', { variant: 'success' });

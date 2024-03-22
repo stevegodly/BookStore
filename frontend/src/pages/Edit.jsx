@@ -16,7 +16,7 @@ const Edit = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5000/api/v1/books/${id}`)
+    axios.get(`https://bookstore-yhcb.onrender.com/api/v1/books/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
@@ -37,7 +37,7 @@ const Edit = () => {
     };
     setLoading(true);
     axios
-      .patch(`http://localhost:5000/api/v1/books/${id}`, data)
+      .patch(`https://bookstore-yhcb.onrender.com/api/v1/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited successfully', { variant: 'success' });
