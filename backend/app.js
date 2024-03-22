@@ -7,7 +7,7 @@ const app=express()
 
 app.use(express.json())
 app.use(cors({
-    origin:'http://localhost:3000',
+    origin:'https://book-store-delta-mauve.vercel.app',
     methods:['GET','POST','PATCH','DELETE'],
     allowedHeaders:['Content-Type'],    
 }))
